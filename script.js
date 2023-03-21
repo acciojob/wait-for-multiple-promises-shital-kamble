@@ -20,8 +20,15 @@ let promise3 = new Promise((resolve, reject) => {
     resolve("Promise 3");
   }, 3000);
 });
+});
 
-const myArray = [promise1, promise2, promise3];
+let promise4 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise 4");
+  }, 4000);
+});
+
+const myArray = [promise1, promise2, promise3, promise4];
 
 Promise.all(myArray)
   .then((res) => {
